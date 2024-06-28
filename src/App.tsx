@@ -1,0 +1,14 @@
+import './App.css'
+import { HashRouter, RouterProvider } from 'react-router-dom'
+import router from "./router/mainRouteMap"
+
+function App() {
+
+  return (
+    <>
+    <RouterProvider router={router} />
+    </>
+  )
+}
+
+export default App
