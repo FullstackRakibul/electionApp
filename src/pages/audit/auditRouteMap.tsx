@@ -1,11 +1,7 @@
 import { RouteObject } from "react-router-dom";
-import CoreIndex from "./core";
-import coreRoutesMap from "./core/coreRoutes"
-import GuestPage from "./guest";
-import NotFoundPage from "./404";
 import PollingAgents from "./pollingAgents";
 
-const AudutRouteMaps : Array<RouteObject>=[
+const auditRoutes: RouteObject[] = [
 
   {
     path:"/audit/polling-agents",
@@ -13,4 +9,4 @@ const AudutRouteMaps : Array<RouteObject>=[
   }
 ]
 
-export default AudutRouteMaps;
+export default auditRoutes;

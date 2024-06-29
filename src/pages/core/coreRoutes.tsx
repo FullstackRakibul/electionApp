@@ -1,9 +1,10 @@
+import { createHashRouter, RouteObject } from 'react-router-dom';
 import AboutPage from "./about";
 import TermsAndCondition from "./termsandcondition"
 import CoreDashboardPage from "./dashboard";
 
 
-const coreRoutes = [
+const coreRoutes : RouteObject[] =  [
   {
     path:"dashboard",
     element: <CoreDashboardPage/>

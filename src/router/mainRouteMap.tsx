@@ -1,7 +1,9 @@
 import { createHashRouter } from "react-router-dom";
 import Login from "../layouts/login";
 import PrivateLayout from "../layouts/PrivateLayout";
-import routeMap from "../pages/routeMap";
+import coreRoutes from "../pages/core/coreRoutes";
+import auditRoutes from "../pages/audit/auditRouteMap";
+import NotFoundPage from "../pages/404";
 
 
 
@@ -13,7 +15,20 @@ const router = createHashRouter([
   {
     path: '/',
     element: <PrivateLayout />,
-    children: routeMap
+    children: [
+      {
+        path: 'core',
+        children: coreRoutes
+      },
+      {
+        path: 'audit',
+        children: auditRoutes
+      }
+    ]
+  },
+  {
+    path: '*',
+    element: <NotFoundPage />
   }
 ])
 
