@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import { Layout, Menu } from 'antd';
 import { Outlet, useNavigate } from 'react-router-dom';
 const { Header, Sider, Content } = Layout;
 
+type MainLayoutProps = {
+  children: ReactNode;
+};
 
-const MainLayout = () => {
+
+const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
   const navigate = useNavigate();
   const handleMenuClick = (e: { key: string }) => {
     navigate(e.key);
@@ -12,26 +16,6 @@ const MainLayout = () => {
   return (
     <>
     <Layout style={{ minHeight: '100vh' }}>
-      <Header className="header">
-        <div className="logo" />
-        <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['1']}>
-          <Menu.Item key="/core/dashboard" onClick={handleMenuClick}>
-            Core Dashboard
-          </Menu.Item>
-          <Menu.Item key="/core/dashboard" onClick={handleMenuClick}>
-            Audit Dashboard
-          </Menu.Item>
-          <Menu.Item key="/core/about" onClick={handleMenuClick}>
-            About
-          </Menu.Item>
-          <Menu.Item key="/audit/terms" onClick={handleMenuClick}>
-            Terms
-          </Menu.Item>
-          <Menu.Item key="/logout" onClick={handleMenuClick}>
-            Logout
-          </Menu.Item>
-        </Menu>
-      </Header>
       <Layout>
         <Sider width={200} className="site-layout-background">
           <Menu
@@ -61,7 +45,7 @@ const MainLayout = () => {
               minHeight: 280,
             }}
           >
-            <Outlet />
+            {children}
           </Content>
         </Layout>
       </Layout>
