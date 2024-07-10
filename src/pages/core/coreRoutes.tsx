@@ -1,5 +1,5 @@
-import { createHashRouter, RouteObject } from 'react-router-dom';
-import AboutPage from "./about";
+import { RouteObject } from 'react-router-dom';
+import UserManagement from "./User/index";
 import TermsAndCondition from "./termsandcondition"
 import CoreDashboardPage from "./dashboard";
 
@@ -10,8 +10,8 @@ const coreRoutes : RouteObject[] =  [
     element: <CoreDashboardPage/>
   },
   {
-    path:"about",
-    element: <AboutPage/>
+    path:"UserManagement",
+    element: <UserManagement/>
   },
   {
     path:"termsandcondition",
