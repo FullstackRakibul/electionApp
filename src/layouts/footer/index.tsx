@@ -1,13 +1,13 @@
-import React from 'react'
+import { Footer } from 'antd/es/layout/layout'
 
 const MianFooter = () => {
   return (
     <>
-      <footer
-        className="bg-primary"
+      <Footer
+        style={{backgroundColor:'#fff'}}
       >
-
-      </footer>
+        @all right resedved ElectionApp.
+      </Footer>
     </>
   )
 }
