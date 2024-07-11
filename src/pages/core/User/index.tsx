@@ -1,4 +1,5 @@
 import {Col, Row, Button, Form, Input, Select } from 'antd';
+import { electionHttpJson } from '../../../config/http';
 
 const UserManagement = () => {
   const [userTypeCreateForm] = Form.useForm();
@@ -6,6 +7,9 @@ const UserManagement = () => {
   
   const onFinish = (values: any) => {
       console.log(values);
+      const apiInsatance = electionHttpJson();
+      const response = apiInsatance.post("/account/usertype_list/",values);
+      console.log(response);
   };
   const onReset = () => {
     userTypeCreateForm.resetFields();
