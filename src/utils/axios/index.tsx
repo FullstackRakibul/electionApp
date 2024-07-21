@@ -6,9 +6,7 @@ import {
 const ConfigureAxios = () => {
     axios.defaults.headers.post['Content-Type'] = 'application/json';
     axios.defaults.baseURL = import.meta.env.VITE_APP_BASE_URL;
-    //axios.defaults.baseURL = "http://202.22.203.92:3100/tms/api/v1";
-    //axios.defaults.baseURL = "https://tenderapi.hisanmastery.com/tms/api/v1";
-    //axios.defaults.baseURL = "http://192.168.61.40:3100/tms/api/v1";
+    //axios.defaults.baseURL = "http://10.10.60.14:8000";
 
     let token = localStorage.getItem("token");
 
