@@ -1,7 +1,7 @@
 import { RouteObject } from 'react-router-dom';
-import UserManagement from "./User/index";
-import TermsAndCondition from "./termsandcondition"
 import CoreDashboardPage from "./dashboard";
+import FirstAppriser from './count/firstAppriser';
+import SecondAppriser from './count/secondAppriser';
 
 
 const coreRoutes : RouteObject[] =  [
@@ -10,12 +10,12 @@ const coreRoutes : RouteObject[] =  [
     element: <CoreDashboardPage/>
   },
   {
-    path:"UserManagement",
-    element: <UserManagement/>
+    path:"fisrt-appriser",
+    element: <FirstAppriser/>
   },
   {
-    path:"termsandcondition",
-    element: <TermsAndCondition/>
+    path:"second-appriser",
+    element: <SecondAppriser/>
   },
 ]
 

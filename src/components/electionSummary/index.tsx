@@ -1,5 +1,4 @@
-import { Card, Col, Row, Table, Tabs } from 'antd'
-import React from 'react'
+import { Card, Col, Row, Table } from 'antd'
 import electionData from '../../interface/electionData'
 import { ColumnsType } from 'antd/lib/table';
 

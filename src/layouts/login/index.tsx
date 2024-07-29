@@ -35,8 +35,11 @@ const onFinishFailed: FormProps<FieldType>['onFinishFailed'] = (errorInfo) => {
   return (
     <>
       <div className="flex justify-center items-center align-middle ">
-        <Row gutter={10}>
-          <Col span={24}>
+        <Row 
+          gutter={10}
+          align="middle"
+        >
+          <Col>
               <Card>
                 <Meta 
                 title="Enter your login credentials"
