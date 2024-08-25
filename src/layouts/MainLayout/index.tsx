@@ -9,6 +9,7 @@ type MainLayoutProps = {
 };
 
 
+
 const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
 
   return (
